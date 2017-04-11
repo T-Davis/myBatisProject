@@ -1,5 +1,6 @@
 package com.movies.mapper;
 
+import com.movies.domain.Film;
 import org.apache.ibatis.annotations.Select;
 
 public interface FilmMapper {
