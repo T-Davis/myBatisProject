@@ -30,33 +30,14 @@ public class FilmResource {
     @RequestMapping("/category")
     public ArrayList<Category> getAllCategories() {
 
-        CategoryDAO category = new CategoryDAO();
-        ArrayList<Category> temp = movies.getAllCategories();
-        return temp;
+        return filmService.getAllCategories();
+
     }
-    @RequestMapping("/film")
+
+    @RequestMapping("/")
     public ArrayList<Film> getAllFilms() {
 
-        FilmDAO movie = new FilmDAO();
-        ArrayList<Film> temp = movies.getAllFilms();
-        return temp;
-    }
-
-    @RequestMapping("/film&actor")
-    public ArrayList<FilmActor> getAllFilmsAndActors() {
-
-        FilmDAO movie = new FilmDAO();
-        ArrayList<FilmActor> temp = movies.getAllFilmsAndActors();
-        return temp;
-
-    }
-
-    @RequestMapping("/film&category")
-    public ArrayList<FilmCategory> getAllFilmsAndCategories() {
-
-        FilmDAO movie = new FilmDAO();
-        ArrayList<FilmCategory> temp = movies.getAllFilmsAndCategory();
-        return temp;
+        return filmService.getAllFilms();
 
     }
 
