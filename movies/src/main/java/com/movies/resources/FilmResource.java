@@ -26,5 +26,19 @@ public class FilmResource {
         return filmService.getAllActors();
     }
 
+    @RequestMapping("/category")
+    public ArrayList<Category> getAllCategories() {
+
+        return filmService.getAllCategories();
+
+    }
+
+    @RequestMapping("/")
+    public ArrayList<Film> getAllFilms() {
+
+        return filmService.getAllFilms();
+
+    }
+
 }
 

@@ -1,6 +1,7 @@
 package com.movies.services;
 
 import com.movies.domain.Actor;
+import com.movies.domain.Category;
 import com.movies.mapper.ActorMapper;
 import com.movies.mapper.FilmMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,8 +15,19 @@ public class FilmService {
     @Autowired
     ActorMapper actorMapper;
 
-    public ArrayList<Actor> getAllActors(){
+    @Autowired
+    CategoryMapper categoryMapper;
+
+    public ArrayList<Actor> getAllActors() {
         return actorMapper.getAllActors();
+
     }
 
+    public ArrayList<Actor> getAllFilms() {
+        return FilmMapper.getAllFilms();
+    }
+
+    public ArrayList<Actor> getAllCategories(){
+        return CategoryMapper.getAllCategories();
+    }
 }
