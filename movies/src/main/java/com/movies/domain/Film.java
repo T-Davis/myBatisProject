@@ -1,4 +1,4 @@
-package domain;
+package com.movies.domain;
 
 public class Film {
     int film_id;

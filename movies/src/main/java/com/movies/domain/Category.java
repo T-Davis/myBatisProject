@@ -1,4 +1,4 @@
-package domain;
+package com.movies.domain;
 
 public class Category {
     int category_id;
