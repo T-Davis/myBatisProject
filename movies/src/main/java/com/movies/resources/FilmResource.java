@@ -2,6 +2,8 @@ package com.movies.resources;
 
 import java.util.ArrayList;
 import com.movies.domain.Actor;
+import com.movies.domain.Category;
+import com.movies.domain.Film;
 import com.movies.services.FilmService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
