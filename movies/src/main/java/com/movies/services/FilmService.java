@@ -1,8 +1,11 @@
 package com.movies.services;
 
 import com.movies.domain.Actor;
+import com.movies.domain.Film;
+import com.movies.domain.Category;
 import com.movies.mapper.ActorMapper;
 import com.movies.mapper.FilmMapper;
+import com.movies.mapper.CategoryMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -20,8 +23,19 @@ public class FilmService {
     @Autowired
     ActorMapper actorMapper;
 
-    public ArrayList<Actor> getAllActors(){
+    @Autowired
+    CategoryMapper categoryMapper;
+
+    public ArrayList<Actor> getAllActors() {
         return actorMapper.getAllActors();
+
     }
 
+    public ArrayList<Film> getAllFilms() {
+        return filmMapper.getAllFilms();
+    }
+
+    public ArrayList<Category> getAllCategories(){
+        return categoryMapper.getAllCategories();
+    }
 }

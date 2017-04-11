@@ -1,7 +1,6 @@
 package com.movies.resources;
 
 import java.util.ArrayList;
-
 import com.movies.domain.Actor;
 import com.movies.services.FilmService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +18,20 @@ public class FilmResource {
     public ArrayList<Actor> getAllActors() {
 
         return filmService.getAllActors();
+    }
+
+    @RequestMapping("/category")
+    public ArrayList<Category> getAllCategories() {
+
+        return filmService.getAllCategories();
+
+    }
+
+    @RequestMapping("/")
+    public ArrayList<Film> getAllFilms() {
+
+        return filmService.getAllFilms();
+
     }
 
 }
